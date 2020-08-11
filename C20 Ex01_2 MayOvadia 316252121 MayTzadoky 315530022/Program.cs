@@ -16,10 +16,9 @@
                 PrintStarsLine(i_numOfSpaces);
                 return;
             }
+
             PrintStarsLine(i_numOfSpaces);
-
             PrintHourglassRec(i_numOfSpaces + 1);
-
             PrintStarsLine(i_numOfSpaces);
         }
 
@@ -34,7 +33,6 @@
                 System.Console.Write("*");
             }
             PrintSpaces(i_numOfSpaces);
-
             System.Console.Write("\n");
         }
 
