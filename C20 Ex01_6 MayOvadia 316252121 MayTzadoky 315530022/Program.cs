@@ -1,4 +1,4 @@
-﻿namespace C20_Ex01_6_MayOvadia_316252121_MayTzadoky_315530022
+﻿namespace C20_Ex01_5_MayOvadia_316252121_MayTzadoky_315530022
 {
     class Program
     {

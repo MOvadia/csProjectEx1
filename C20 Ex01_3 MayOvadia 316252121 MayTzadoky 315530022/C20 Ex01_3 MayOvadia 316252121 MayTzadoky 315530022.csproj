@@ -34,5 +34,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\C20 Ex01_2 MayOvadia 316252121 MayTzadoky 315530022\C20 Ex01_2 MayOvadia 316252121 MayTzadoky 315530022.csproj">
+      <Project>{17e263aa-f0b9-406b-a3f5-4261a7cf1e6f}</Project>
+      <Name>C20 Ex01_2 MayOvadia 316252121 MayTzadoky 315530022</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

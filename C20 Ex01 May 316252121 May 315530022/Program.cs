@@ -4,10 +4,10 @@
     {
         public static void Main()
         {
-            BinarySerial();
+            BinarySeries();
         }
 
-        public static void BinarySerial()
+        public static void BinarySeries()
         {
             System.Console.WriteLine("Please enter 4 binaries numbers: ");
             string binaryNumber1 = GetAndValidateUserInput();
@@ -33,7 +33,6 @@
             do
             {
                 binaryNumber = System.Console.ReadLine();
-
             } while (CheckUserInput(binaryNumber) == false);
 
             return binaryNumber;
@@ -41,7 +40,7 @@
 
         public static bool CheckUserInput(string i_binaryNumber)
         {
-            bool isBinary = true;
+            bool isBinary;
             char[] binaryChar = i_binaryNumber.ToCharArray();
 
             bool isCorrectStringLen = i_binaryNumber.Length == 8;
@@ -56,7 +55,7 @@
             for (int i = 0; i < 8; ++i)
             {
                 isBinary = (binaryChar[i] == '0' || binaryChar[i] == '1');
-                if (!isBinary)
+                if(!isBinary)
                 {
                     System.Console.WriteLine("Input is invalid!\n");
 
@@ -140,27 +139,26 @@
             }
         }
 
-        public static int IsAscendingSerial(int i_decimalNumber)
+        public static int IsAscendingSeries(int i_decimalNumber)
         {
             int newRightDigit;
             int rightDigit = i_decimalNumber % 10;
-            bool isAscendingSerial = true;
+            bool isAscendingSeries = true;
 
             i_decimalNumber = i_decimalNumber / 10;
 
-            while (i_decimalNumber > 0 && isAscendingSerial)
+            while (i_decimalNumber > 0 && isAscendingSeries)
             {
                 newRightDigit = i_decimalNumber % 10;
                 i_decimalNumber = i_decimalNumber / 10;
 
-                isAscendingSerial = rightDigit <= newRightDigit;
+                isAscendingSeries = rightDigit <= newRightDigit;
             }
 
-            if(isAscendingSerial)
+            if(isAscendingSeries)
             {
                 return 1;
             }
-
             else
             {
                 return 0;
@@ -170,8 +168,8 @@
         public static void StatisticsOfBinaryNumbers(string i_binaryNumber1, string i_binaryNumber2, string i_binaryNumber3, string i_binaryNumber4)
         {
            float averageOfZero = AverageOfZero(i_binaryNumber1, i_binaryNumber2, i_binaryNumber3, i_binaryNumber4);
-           float averageOfone = AverageOfOne(i_binaryNumber1, i_binaryNumber2, i_binaryNumber3, i_binaryNumber4);
-           string printAverageOfZeroAndOne = string.Format("The average of '0' is: {0} \nThe average of '1' is: {1}\n", averageOfZero, averageOfone);
+           float averageOfOne = AverageOfOne(i_binaryNumber1, i_binaryNumber2, i_binaryNumber3, i_binaryNumber4);
+           string printAverageOfZeroAndOne = string.Format("The average of the digit '0' in the binary numbers is: {0} \ntThe average of the digit '1' in the binary numbers is: {1}\n", averageOfZero, averageOfOne);
 
            System.Console.WriteLine(printAverageOfZeroAndOne);
         }
@@ -180,8 +178,8 @@
         {
            int howMuchPowerOfTwo = IsPowerOfTwo(i_decimalNumber1) + IsPowerOfTwo(i_decimalNumber2) + IsPowerOfTwo(i_decimalNumber3) + IsPowerOfTwo(i_decimalNumber4);
            int averagedNumbers = (i_decimalNumber1 + i_decimalNumber2 + i_decimalNumber3 + i_decimalNumber4) / 4;
-           int howMuchAscendingSerial = IsAscendingSerial(i_decimalNumber1) + IsAscendingSerial(i_decimalNumber2) + IsAscendingSerial(i_decimalNumber3) + IsAscendingSerial(i_decimalNumber4);
-           string printStatistics = string.Format("{0} of the numbers are a power of 2.\n{1} of the numbers are ascending serial.\nThe average of the numbers is {2}.\n", howMuchPowerOfTwo, howMuchAscendingSerial, averagedNumbers);
+           int howMuchAscendingSeries = IsAscendingSeries(i_decimalNumber1) + IsAscendingSeries(i_decimalNumber2) + IsAscendingSeries(i_decimalNumber3) + IsAscendingSeries(i_decimalNumber4);
+           string printStatistics = string.Format("{0} of the numbers are a power of 2.\nThere are {1} numbers which are an ascending series.\nThe average of the decimal numbers is {2}.\n", howMuchPowerOfTwo, howMuchAscendingSeries, averagedNumbers);
 
            System.Console.WriteLine(printStatistics);
         }

@@ -1,4 +1,4 @@
-﻿namespace C20_Ex01_5_MayOvadia_316252121_MayTzadoky_315530022
+﻿namespace C20_Ex01_4_MayOvadia_316252121_MayTzadoky_315530022
 {
     class Program
     {
@@ -20,7 +20,6 @@
             {
                 LowerCaseNumberInString(stringToAnalyze);
             }
-
         }
 
         // TODO: validation check
@@ -54,6 +53,7 @@
                     return false;
                 }
             }
+
             return true;
         }
 
