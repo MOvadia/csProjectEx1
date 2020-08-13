@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>C20_Ex01_2_MayOvadia_316252121_MayTzadoky_315530022</RootNamespace>
     <AssemblyName>C20 Ex01_2 MayOvadia 316252121 MayTzadoky 315530022</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
