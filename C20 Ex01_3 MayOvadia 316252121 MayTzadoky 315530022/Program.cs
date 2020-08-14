@@ -30,7 +30,7 @@
             //    return;
             //}
 
-            bool isSingleStar = i_lengthOfHourGlass == 1;
+            bool isSingleStar = (i_lengthOfHourGlass == 1);
 
             if (isSingleStar)
             {
@@ -47,7 +47,7 @@
         {
             int numOfStars = i_lengthOfHourGlass;
 
-            PrintSpaces(i_numOfSpaces);
+            C20_Ex01_2_MayOvadia_316252121_MayTzadoky_315530022.Program.PrintSpaces(i_numOfSpaces);
 
             for (int i = 0; i < numOfStars; ++i)
             {
@@ -56,12 +56,5 @@
             System.Console.Write("\n");
         }
 
-        public static void PrintSpaces(int i_numOfSpaces)
-        {
-            for (int i = 0; i < i_numOfSpaces; ++i)
-            {
-                System.Console.Write(" ");
-            }
-        }
     }
 }

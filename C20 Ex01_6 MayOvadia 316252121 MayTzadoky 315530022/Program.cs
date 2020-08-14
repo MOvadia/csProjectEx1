@@ -22,14 +22,13 @@
 
         public static int MaximumDigit(string i_Number)
         {
-            char[] digitsStr = i_Number.ToCharArray();
-            int maxDigit = digitsStr[0] - '0';
+            int maxDigit = i_Number[0] - '0';
 
             for(int i = 1; i < 8; i++)
             {
-                if( maxDigit < (digitsStr[i] - '0'))
+                if( maxDigit < (i_Number[i] - '0'))
                 {
-                    maxDigit = digitsStr[i] - '0';
+                    maxDigit = i_Number[i] - '0';
                 }
             }
 
@@ -38,14 +37,13 @@
 
         public static int MinimumDigit(string i_Number)
         {
-            char[] digitsStr = i_Number.ToCharArray();
-            int minDigit = digitsStr[0] - '0';
+            int minDigit = i_Number[0] - '0';
 
             for (int i = 1; i < 8; i++)
             {
-                if (minDigit > (digitsStr[i] - '0'))
+                if (minDigit > (i_Number[i] - '0'))
                 {
-                    minDigit = digitsStr[i] - '0';
+                    minDigit = i_Number[i] - '0';
                 }
             }
 
@@ -54,12 +52,11 @@
 
         public static int HowManyDigitsAreDividedByFour(string i_Number)
         {
-            char[] digitsStr = i_Number.ToCharArray();
             int counterDigitsAreDividedByFour = 0;
 
             for(int i = 0; i < 8; i++)
             {
-                if((digitsStr[i] - '0') % 4 == 0)
+                if((i_Number[i] - '0') % 4 == 0)
                 {
                     counterDigitsAreDividedByFour++;
                 }
@@ -70,13 +67,12 @@
 
         public static int HowManyDigitsWhichLargeThanOnenessDigit(string i_Number)
         {
-            char[] digitsStr = i_Number.ToCharArray();
-            int onenessDigit = digitsStr[0];
+            int onenessDigit = i_Number[0];
             int counterDigitsWhichLargeThanOnenessDigit = 0;
 
             for (int i = 1; i < 8; i++)
             {
-                if (digitsStr[i] > onenessDigit)
+                if (i_Number[i] > onenessDigit)
                 {
                     counterDigitsWhichLargeThanOnenessDigit++;
                 }

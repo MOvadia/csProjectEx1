@@ -41,11 +41,10 @@
         public static bool CheckUserInput(string i_binaryNumber)
         {
             bool isBinary;
-            char[] binaryChar = i_binaryNumber.ToCharArray();
 
-            bool isCorrectStringLen = i_binaryNumber.Length == 8;
+            bool isCorrectBinaryNumLen = i_binaryNumber.Length == 8;
 
-            if (!isCorrectStringLen)
+            if (!isCorrectBinaryNumLen)
             {
                 System.Console.WriteLine("Input is invalid!\n");
 
@@ -54,10 +53,10 @@
 
             for (int i = 0; i < 8; ++i)
             {
-                isBinary = (binaryChar[i] == '0' || binaryChar[i] == '1');
+                isBinary = (i_binaryNumber[i] == '0' || i_binaryNumber[i] == '1');
                 if(!isBinary)
                 {
-                    System.Console.WriteLine("Input is invalid!\n");
+                    System.Console.WriteLine("Invalid input!\n");
 
                     return false;
                 }
@@ -69,10 +68,9 @@
         public static int CounterZero(string i_binaryNumber)
         {
             int counterZero = 0;
-            char[] binaryChar = i_binaryNumber.ToCharArray();
             for (int i = 0; i < 8; ++i)
             {
-                if (binaryChar[i] == '0')
+                if (i_binaryNumber[i] == '0')
                 {
                     counterZero++;
                 }
@@ -91,10 +89,9 @@
         public static int CounterOne(string i_binaryNumber)
         {
             int counterOne = 0;
-            char[] binaryChar = i_binaryNumber.ToCharArray();
             for (int i = 0; i < 8; ++i)
             {
-                if (binaryChar[i] == '1')
+                if (i_binaryNumber[i] == '1')
                 {
                     counterOne++;
                 }
@@ -113,11 +110,10 @@
         public static int BinaryToDecimal(string i_binaryNumber)
         {
             int decimalNumber = 0, powerOfTwo = 1, digitOfBinaryNumber;
-            char[] binaryChar = i_binaryNumber.ToCharArray();
 
             for (int i = 7; i >= 0; i--)
             {
-                digitOfBinaryNumber = int.Parse(binaryChar[i].ToString());
+                digitOfBinaryNumber = int.Parse(i_binaryNumber[i].ToString());
                 decimalNumber = decimalNumber + digitOfBinaryNumber * powerOfTwo;
                 powerOfTwo = powerOfTwo * 2;
             }
