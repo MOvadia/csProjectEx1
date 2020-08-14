@@ -15,18 +15,53 @@
             System.Console.WriteLine("Please enter the number of lines for the Hour glass: ");
 
             int lengthOfHourGlass = int.Parse(System.Console.ReadLine());
-            PrintHourGlassRec(lengthOfHourGlass);
+            if(lengthOfHourGlass % 2 == 0)
+            {
+                lengthOfHourGlass += 1;
+            }
+            PrintHourGlassRec(0,lengthOfHourGlass);
         }
 
-        public static void PrintHourGlassRec(int i_numOfSpaces)
+        public static void PrintHourGlassRec(int i_numOfSpaces, int i_lengthOfHourGlass)
         {
-            if(i_numOfSpaces == 0)
+            //if (i_lengthOfHourGlass == 5)
+            //{
+            //    C20_Ex01_2_MayOvadia_316252121_MayTzadoky_315530022.Program.PrintHourglassRec(i_numOfSpaces);
+            //    return;
+            //}
+
+            bool isSingleStar = i_lengthOfHourGlass == 1;
+
+            if (isSingleStar)
             {
-                C20_Ex01_2_MayOvadia_316252121_MayTzadoky_315530022.Program.PrintHourglassRec(i_numOfSpaces);
+                PrintStarsLine(i_numOfSpaces, i_lengthOfHourGlass);
+                return;
+            }
+
+            PrintStarsLine(i_numOfSpaces, i_lengthOfHourGlass);
+            PrintHourGlassRec(i_numOfSpaces + 1, i_lengthOfHourGlass-2);
+            PrintStarsLine(i_numOfSpaces, i_lengthOfHourGlass);
+        }
+
+        public static void PrintStarsLine(int i_numOfSpaces, int i_lengthOfHourGlass)
+        {
+            int numOfStars = i_lengthOfHourGlass;
+
+            PrintSpaces(i_numOfSpaces);
+
+            for (int i = 0; i < numOfStars; ++i)
+            {
+                System.Console.Write("*");
+            }
+            System.Console.Write("\n");
+        }
+
+        public static void PrintSpaces(int i_numOfSpaces)
+        {
+            for (int i = 0; i < i_numOfSpaces; ++i)
+            {
+                System.Console.Write(" ");
             }
         }
-
-
-
     }
 }
