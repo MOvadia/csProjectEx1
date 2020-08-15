@@ -1,6 +1,6 @@
 ﻿namespace C20_Ex01_1_MayOvadia_316252121_MayTzadoky_315530022
 {
-    class Program
+    public class Program
     {
         public static void Main()
         {
@@ -14,7 +14,6 @@
             string binaryNumber2 = GetAndValidateUserInput();
             string binaryNumber3 = GetAndValidateUserInput();
             string binaryNumber4 = GetAndValidateUserInput();
-
             int decimalNumber1 = BinaryToDecimal(binaryNumber1);
             int decimalNumber2 = BinaryToDecimal(binaryNumber2);
             int decimalNumber3 = BinaryToDecimal(binaryNumber3);
@@ -30,21 +29,21 @@
         public static string GetAndValidateUserInput()
         {
             string binaryNumber;
+
             do
             {
                 binaryNumber = System.Console.ReadLine();
-            } while (CheckUserInput(binaryNumber) == false);
+            }
+            while (!IsValidUserInput(binaryNumber));
 
             return binaryNumber;
         }
 
-        public static bool CheckUserInput(string i_binaryNumber)
+        public static bool IsValidUserInput(string i_binaryNumber)
         {
             bool isBinary;
 
-            bool isCorrectBinaryNumLen = i_binaryNumber.Length == 8;
-
-            if (!isCorrectBinaryNumLen)
+            if (!(i_binaryNumber.Length == 8))
             {
                 System.Console.WriteLine("Input is invalid!\n");
 
@@ -53,8 +52,8 @@
 
             for (int i = 0; i < 8; ++i)
             {
-                isBinary = (i_binaryNumber[i] == '0' || i_binaryNumber[i] == '1');
-                if(!isBinary)
+                isBinary = i_binaryNumber[i] == '0' || i_binaryNumber[i] == '1';
+                if (!isBinary)
                 {
                     System.Console.WriteLine("Invalid input!\n");
 
@@ -68,6 +67,7 @@
         public static int CounterZero(string i_binaryNumber)
         {
             int counterZero = 0;
+
             for (int i = 0; i < 8; ++i)
             {
                 if (i_binaryNumber[i] == '0')
@@ -81,7 +81,7 @@
 
         public static float AverageOfZero(string i_binaryNumber1, string i_binaryNumber2, string i_binaryNumber3, string i_binaryNumber4)
         {
-            float averageOfZero = CounterZero(i_binaryNumber1) + CounterZero(i_binaryNumber2) + CounterZero(i_binaryNumber3) + CounterZero(i_binaryNumber4) / 4;
+            float averageOfZero = (CounterZero(i_binaryNumber1) + CounterZero(i_binaryNumber2) + CounterZero(i_binaryNumber3) + CounterZero(i_binaryNumber4)) / 4;
 
             return averageOfZero;
         }
@@ -89,6 +89,7 @@
         public static int CounterOne(string i_binaryNumber)
         {
             int counterOne = 0;
+
             for (int i = 0; i < 8; ++i)
             {
                 if (i_binaryNumber[i] == '1')
@@ -114,7 +115,7 @@
             for (int i = 7; i >= 0; i--)
             {
                 digitOfBinaryNumber = int.Parse(i_binaryNumber[i].ToString());
-                decimalNumber = decimalNumber + digitOfBinaryNumber * powerOfTwo;
+                decimalNumber = decimalNumber + (digitOfBinaryNumber * powerOfTwo);
                 powerOfTwo = powerOfTwo * 2;
             }
 
@@ -124,15 +125,13 @@
         public static int IsPowerOfTwo(int i_decimalNumber)
         {
             bool isPowerOfTwo = (int)(System.Math.Ceiling((System.Math.Log(i_decimalNumber) / System.Math.Log(2)))) == (int)(System.Math.Floor(((System.Math.Log(i_decimalNumber) / System.Math.Log(2)))));
-
+            int counterOfPowOfTwo = 0;
             if (isPowerOfTwo)
             {
-                return 1;
+                counterOfPowOfTwo = 1;
             }
-            else
-            {
-                return 0;
-            }
+
+            return counterOfPowOfTwo;
         }
 
         public static int IsAscendingSeries(int i_decimalNumber)
@@ -151,14 +150,14 @@
                 isAscendingSeries = rightDigit <= newRightDigit;
             }
 
-            if(isAscendingSeries)
+            int counterIsAscendingSeries = 0;
+
+            if (isAscendingSeries)
             {
-                return 1;
+                counterIsAscendingSeries = 1;
             }
-            else
-            {
-                return 0;
-            }
+
+            return counterIsAscendingSeries;
         }
 
         public static void StatisticsOfBinaryNumbers(string i_binaryNumber1, string i_binaryNumber2, string i_binaryNumber3, string i_binaryNumber4)
@@ -181,7 +180,6 @@
         }
     }
 }
-
 
 //public static int HowMuchPowerOfTwo(int i_DecimalNumber1, int i_DecimalNumber2, int i_DecimalNumber3, int i_DecimalNumber4)
 //{

@@ -1,6 +1,6 @@
 ﻿namespace C20_Ex01_4_MayOvadia_316252121_MayTzadoky_315530022
 {
-    class Program
+    public class Program
     {
         public static void Main()
         {
@@ -22,8 +22,7 @@
             }
         }
 
-        // TODO: validation check
-        public static string GetUserValidInputString(ref bool isNumber)
+        public static string GetUserValidInputString(ref bool io_isNumber)
         {
             bool isJustNumOrJustStr;
             bool isInDefinedLength;
@@ -33,11 +32,11 @@
             {
                 System.Console.WriteLine("Please enter string:");
                 inputString = System.Console.ReadLine();
-                isNumber = System.Int64.TryParse(inputString, out stringBecomeNum);
-                isInDefinedLength = (inputString.Length == 12);
-                isJustNumOrJustStr = (isNumber || IsOnlyLettersInString(inputString));
-
-            } while (!isJustNumOrJustStr || !isInDefinedLength);
+                io_isNumber = long.TryParse(inputString, out stringBecomeNum);
+                isInDefinedLength = inputString.Length == 12;
+                isJustNumOrJustStr = io_isNumber || IsOnlyLettersInString(inputString);
+            }
+            while (!isJustNumOrJustStr || !isInDefinedLength);
 
             return inputString;
         }
@@ -75,14 +74,14 @@
 
         public static bool IsPalindromRec(string i_stringToAnalyze, int i_startOfString, int i_endOfString)
         {
-            bool isSingleCharOrEmpty = (i_startOfString >= i_endOfString);
+            bool isSingleCharOrEmpty = i_startOfString >= i_endOfString;
 
             if (isSingleCharOrEmpty)
             {
                 return true;
             }
 
-            bool isFirstAndLastLetterEqual = (i_stringToAnalyze[i_startOfString] == i_stringToAnalyze[i_endOfString]);
+            bool isFirstAndLastLetterEqual = i_stringToAnalyze[i_startOfString] == i_stringToAnalyze[i_endOfString];
 
             if (!isFirstAndLastLetterEqual)
             {
@@ -102,9 +101,10 @@
             int sumOfNumberDigit = 0;
             for (int i = 0; i < i_stringToAnalyze.Length; ++i)
             {
-                sumOfNumberDigit += (i_stringToAnalyze[i] - '0');
+                sumOfNumberDigit += i_stringToAnalyze[i] - '0';
             }
-            bool isDividByThree = (sumOfNumberDigit % 3 == 0);
+
+            bool isDividByThree = sumOfNumberDigit % 3 == 0;
 
             string divideByThreeResualt;
             if (isDividByThree)
@@ -115,6 +115,7 @@
             {
                 divideByThreeResualt = string.Format("The number: {0} is not divide by 3", i_stringToAnalyze);
             }
+
             System.Console.WriteLine(divideByThreeResualt);
         }
 

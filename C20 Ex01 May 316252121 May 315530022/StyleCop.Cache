@@ -5,280 +5,161 @@
   </project>
   <sourcecode name="Program.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
-      <styleCop>2020/08/10 21:30:53.244</styleCop>
-      <settingsFile>2020/08/10 21:30:53.226</settingsFile>
-      <sourceFile>2020/08/12 13:20:22.169</sourceFile>
-      <parser>2020/08/10 21:30:53.244</parser>
-      <StyleCop.CSharp.DocumentationRules>2020/08/10 21:30:53.244</StyleCop.CSharp.DocumentationRules>
-      <StyleCop.CSharp.DocumentationRules.FilesHashCode>-435576060</StyleCop.CSharp.DocumentationRules.FilesHashCode>
-      <StyleCop.CSharp.LayoutRules>2020/08/10 21:30:53.244</StyleCop.CSharp.LayoutRules>
+      <styleCop>2020/08/09 23:07:33.772</styleCop>
+      <settingsFile>2020/08/15 13:39:14.345</settingsFile>
+      <sourceFile>2020/08/15 13:34:12.412</sourceFile>
+      <parser>2020/08/09 23:07:33.772</parser>
+      <StyleCop.CSharp.DocumentationRules>2020/08/09 23:07:33.772</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>524292458</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2020/08/09 23:07:33.772</StyleCop.CSharp.LayoutRules>
       <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
-      <StyleCop.CSharp.MaintainabilityRules>2020/08/10 21:30:53.244</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules>2020/08/09 23:07:33.772</StyleCop.CSharp.MaintainabilityRules>
       <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
-      <StyleCop.CSharp.NamingRules>2020/08/10 21:30:53.244</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules>2020/08/09 23:07:33.772</StyleCop.CSharp.NamingRules>
       <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
-      <StyleCop.CSharp.OrderingRules>2020/08/10 21:30:53.244</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules>2020/08/09 23:07:33.772</StyleCop.CSharp.OrderingRules>
       <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
-      <StyleCop.CSharp.ReadabilityRules>2020/08/10 21:30:53.244</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules>2020/08/09 23:07:33.772</StyleCop.CSharp.ReadabilityRules>
       <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
-      <StyleCop.CSharp.SpacingRules>2020/08/10 21:30:53.244</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules>2020/08/09 23:07:33.772</StyleCop.CSharp.SpacingRules>
       <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
     </timestamps>
     <violations>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="FileMustHaveHeader" ruleCheckId="SA1633">
-        <context>The file has no header, the header Xml is invalid, or the header is not located at the top of the file.</context>
-        <line>1</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CodeMustNotContainMultipleBlankLinesInARow" ruleCheckId="SA1507">
-        <context>The code must not contain multiple blank lines in a row.</context>
-        <line>189</line>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
         <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>190</line>
-        <index>7250</index>
-        <endIndex>7374</endIndex>
-        <startLine>190</startLine>
+        <line>184</line>
+        <index>7029</index>
+        <endIndex>7153</endIndex>
+        <startLine>184</startLine>
         <startColumn>1</startColumn>
-        <endLine>190</endLine>
+        <endLine>184</endLine>
         <endColumn>125</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
         <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>191</line>
-        <index>7377</index>
-        <endIndex>7379</endIndex>
-        <startLine>191</startLine>
+        <line>185</line>
+        <index>7156</index>
+        <endIndex>7158</endIndex>
+        <startLine>185</startLine>
         <startColumn>1</startColumn>
-        <endLine>191</endLine>
+        <endLine>185</endLine>
         <endColumn>3</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
         <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>194</line>
-        <index>7546</index>
-        <endIndex>7576</endIndex>
-        <startLine>194</startLine>
+        <line>188</line>
+        <index>7325</index>
+        <endIndex>7355</endIndex>
+        <startLine>188</startLine>
         <startColumn>1</startColumn>
-        <endLine>194</endLine>
+        <endLine>188</endLine>
         <endColumn>31</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
         <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>195</line>
-        <index>7579</index>
-        <endIndex>7581</endIndex>
-        <startLine>195</startLine>
+        <line>189</line>
+        <index>7358</index>
+        <endIndex>7360</endIndex>
+        <startLine>189</startLine>
         <startColumn>1</startColumn>
-        <endLine>195</endLine>
+        <endLine>189</endLine>
         <endColumn>3</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
         <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>197</line>
-        <index>7586</index>
-        <endIndex>7717</endIndex>
-        <startLine>197</startLine>
+        <line>191</line>
+        <index>7365</index>
+        <endIndex>7496</endIndex>
+        <startLine>191</startLine>
         <startColumn>1</startColumn>
-        <endLine>197</endLine>
+        <endLine>191</endLine>
         <endColumn>132</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
         <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>198</line>
-        <index>7720</index>
-        <endIndex>7722</endIndex>
-        <startLine>198</startLine>
+        <line>192</line>
+        <index>7499</index>
+        <endIndex>7501</endIndex>
+        <startLine>192</startLine>
         <startColumn>1</startColumn>
-        <endLine>198</endLine>
+        <endLine>192</endLine>
         <endColumn>3</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
         <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>201</line>
-        <index>7846</index>
-        <endIndex>7881</endIndex>
-        <startLine>201</startLine>
+        <line>195</line>
+        <index>7625</index>
+        <endIndex>7660</endIndex>
+        <startLine>195</startLine>
         <startColumn>1</startColumn>
-        <endLine>201</endLine>
+        <endLine>195</endLine>
         <endColumn>36</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.SpacingRules" rule="SingleLineCommentsMustBeginWithSingleSpace" ruleCheckId="SA1005">
         <context>The comment must start with a single space. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
-        <line>202</line>
-        <index>7884</index>
-        <endIndex>7886</endIndex>
-        <startLine>202</startLine>
+        <line>196</line>
+        <index>7663</index>
+        <endIndex>7665</endIndex>
+        <startLine>196</startLine>
         <startColumn>1</startColumn>
-        <endLine>202</endLine>
+        <endLine>196</endLine>
         <endColumn>3</endColumn>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The class must have a documentation header.</context>
-        <line>3</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="AccessModifierMustBeDeclared" ruleCheckId="SA1400">
-        <context>The class must have an access modifier.</context>
-        <line>3</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>5</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>10</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>30</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsForMultiLineStatementsMustNotShareLine" ruleCheckId="SA1500">
-        <context>If a statement spans multiple lines, the closing curly bracket must be placed on its own line.</context>
-        <line>36</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>41</line>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="StatementMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1119">
         <context>The line contains unnecessary parenthesis.</context>
-        <line>57</line>
-        <index>2078</index>
-        <endIndex>2123</endIndex>
-        <startLine>57</startLine>
-        <startColumn>28</startColumn>
-        <endLine>57</endLine>
-        <endColumn>73</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>69</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>84</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="ArithmeticExpressionsMustDeclarePrecedence" ruleCheckId="SA1407">
-        <context>Insert parentheses within the arithmetic expression to declare the operator precedence.</context>
-        <line>86</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>91</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>106</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>113</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="ArithmeticExpressionsMustDeclarePrecedence" ruleCheckId="SA1407">
-        <context>Insert parentheses within the arithmetic expression to declare the operator precedence.</context>
-        <line>121</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>128</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="StatementMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1119">
-        <context>The line contains unnecessary parenthesis.</context>
-        <line>130</line>
-        <index>4538</index>
-        <endIndex>4615</endIndex>
-        <startLine>130</startLine>
+        <line>127</line>
+        <index>4259</index>
+        <endIndex>4336</endIndex>
+        <startLine>127</startLine>
         <startColumn>38</startColumn>
-        <endLine>130</endLine>
+        <endLine>127</endLine>
         <endColumn>115</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="StatementMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1119">
         <context>The line contains unnecessary parenthesis.</context>
-        <line>130</line>
-        <index>4559</index>
-        <endIndex>4613</endIndex>
-        <startLine>130</startLine>
+        <line>127</line>
+        <index>4280</index>
+        <endIndex>4334</endIndex>
+        <startLine>127</startLine>
         <startColumn>59</startColumn>
-        <endLine>130</endLine>
+        <endLine>127</endLine>
         <endColumn>113</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="StatementMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1119">
         <context>The line contains unnecessary parenthesis.</context>
-        <line>130</line>
-        <index>4625</index>
-        <endIndex>4702</endIndex>
-        <startLine>130</startLine>
+        <line>127</line>
+        <index>4346</index>
+        <endIndex>4423</endIndex>
+        <startLine>127</startLine>
         <startColumn>125</startColumn>
-        <endLine>130</endLine>
+        <endLine>127</endLine>
         <endColumn>202</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.MaintainabilityRules" rule="StatementMustNotUseUnnecessaryParenthesis" ruleCheckId="SA1119">
         <context>The line contains unnecessary parenthesis.</context>
-        <line>130</line>
-        <index>4644</index>
-        <endIndex>4700</endIndex>
-        <startLine>130</startLine>
+        <line>127</line>
+        <index>4365</index>
+        <endIndex>4421</endIndex>
+        <startLine>127</startLine>
         <startColumn>144</startColumn>
-        <endLine>130</endLine>
+        <endLine>127</endLine>
         <endColumn>200</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>142</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.SpacingRules" rule="KeywordsMustBeSpacedCorrectly" ruleCheckId="SA1000">
-        <context>The spacing around the keyword 'if' is invalid.</context>
-        <line>158</line>
-        <index>5432</index>
-        <endIndex>5433</endIndex>
-        <startLine>158</startLine>
-        <startColumn>13</startColumn>
-        <endLine>158</endLine>
-        <endColumn>14</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>168</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>177</line>
         <warning>False</warning>
       </violation>
     </violations>
   </sourcecode>
+  <project key="696212705">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
 </stylecopresultscache>

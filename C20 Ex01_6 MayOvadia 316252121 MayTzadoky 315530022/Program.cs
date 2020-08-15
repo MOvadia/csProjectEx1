@@ -1,6 +1,6 @@
 ﻿namespace C20_Ex01_5_MayOvadia_316252121_MayTzadoky_315530022
 {
-    class Program
+    public class Program
     {
         public static void Main()
         {
@@ -20,43 +20,43 @@
             System.Console.WriteLine(printStatistics);
         }
 
-        public static int MaximumDigit(string i_Number)
+        public static int MaximumDigit(string i_number)
         {
-            int maxDigit = i_Number[0] - '0';
+            int maxDigit = i_number[0] - '0';
 
-            for(int i = 1; i < 8; i++)
+            for (int i = 1; i < 8; i++)
             {
-                if( maxDigit < (i_Number[i] - '0'))
+                if (maxDigit < (i_number[i] - '0'))
                 {
-                    maxDigit = i_Number[i] - '0';
+                    maxDigit = i_number[i] - '0';
                 }
             }
 
             return maxDigit;
         }
 
-        public static int MinimumDigit(string i_Number)
+        public static int MinimumDigit(string i_number)
         {
-            int minDigit = i_Number[0] - '0';
+            int minDigit = i_number[0] - '0';
 
             for (int i = 1; i < 8; i++)
             {
-                if (minDigit > (i_Number[i] - '0'))
+                if (minDigit > (i_number[i] - '0'))
                 {
-                    minDigit = i_Number[i] - '0';
+                    minDigit = i_number[i] - '0';
                 }
             }
 
             return minDigit;
         }
 
-        public static int HowManyDigitsAreDividedByFour(string i_Number)
+        public static int HowManyDigitsAreDividedByFour(string i_number)
         {
             int counterDigitsAreDividedByFour = 0;
 
-            for(int i = 0; i < 8; i++)
+            for (int i = 0; i < 8; i++)
             {
-                if((i_Number[i] - '0') % 4 == 0)
+                if ((i_number[i] - '0') % 4 == 0)
                 {
                     counterDigitsAreDividedByFour++;
                 }
@@ -65,14 +65,14 @@
             return counterDigitsAreDividedByFour;
         }
 
-        public static int HowManyDigitsWhichLargeThanOnenessDigit(string i_Number)
+        public static int HowManyDigitsWhichLargeThanOnenessDigit(string i_number)
         {
-            int onenessDigit = i_Number[0];
+            int onenessDigit = i_number[0];
             int counterDigitsWhichLargeThanOnenessDigit = 0;
 
             for (int i = 1; i < 8; i++)
             {
-                if (i_Number[i] > onenessDigit)
+                if (i_number[i] > onenessDigit)
                 {
                     counterDigitsWhichLargeThanOnenessDigit++;
                 }

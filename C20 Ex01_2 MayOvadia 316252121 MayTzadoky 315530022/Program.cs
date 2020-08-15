@@ -24,7 +24,7 @@
 
         public static void PrintStarsLine(int i_numOfSpaces)
         {
-            int numOfStars = 5 - i_numOfSpaces * 2;
+            int numOfStars = 5 - (i_numOfSpaces * 2);
 
             PrintSpaces(i_numOfSpaces);
 
@@ -32,6 +32,7 @@
             {
                 System.Console.Write("*");
             }
+
             PrintSpaces(i_numOfSpaces);
             System.Console.Write("\n");
         }
