@@ -81,7 +81,7 @@
 
         public static float AverageOfZero(string i_binaryNumber1, string i_binaryNumber2, string i_binaryNumber3, string i_binaryNumber4)
         {
-            float averageOfZero = (CounterZero(i_binaryNumber1) + CounterZero(i_binaryNumber2) + CounterZero(i_binaryNumber3) + CounterZero(i_binaryNumber4)) / 4;
+            float averageOfZero = (float)(CounterZero(i_binaryNumber1) + CounterZero(i_binaryNumber2) + CounterZero(i_binaryNumber3) + CounterZero(i_binaryNumber4)) / 4;
 
             return averageOfZero;
         }
@@ -103,7 +103,7 @@
 
         public static float AverageOfOne(string i_binaryNumber1, string i_binaryNumber2, string i_binaryNumber3, string i_binaryNumber4)
         {
-            float averageOfOne = (CounterOne(i_binaryNumber1) + CounterOne(i_binaryNumber2) + CounterOne(i_binaryNumber3) + CounterOne(i_binaryNumber4)) / 4;
+            float averageOfOne = (float)(CounterOne(i_binaryNumber1) + CounterOne(i_binaryNumber2) + CounterOne(i_binaryNumber3) + CounterOne(i_binaryNumber4)) / 4;
 
             return averageOfOne;
         }
@@ -124,7 +124,9 @@
 
         public static int IsPowerOfTwo(int i_decimalNumber)
         {
-            bool isPowerOfTwo = (int)(System.Math.Ceiling((System.Math.Log(i_decimalNumber) / System.Math.Log(2)))) == (int)(System.Math.Floor(((System.Math.Log(i_decimalNumber) / System.Math.Log(2)))));
+            double logOfDecimalNum = System.Math.Log(i_decimalNumber, 2);
+            bool isPowerOfTwo = logOfDecimalNum % 1 == 0;
+
             int counterOfPowOfTwo = 0;
             if (isPowerOfTwo)
             {
@@ -162,35 +164,28 @@
 
         public static void StatisticsOfBinaryNumbers(string i_binaryNumber1, string i_binaryNumber2, string i_binaryNumber3, string i_binaryNumber4)
         {
-           float averageOfZero = AverageOfZero(i_binaryNumber1, i_binaryNumber2, i_binaryNumber3, i_binaryNumber4);
-           float averageOfOne = AverageOfOne(i_binaryNumber1, i_binaryNumber2, i_binaryNumber3, i_binaryNumber4);
-           string printAverageOfZeroAndOne = string.Format("The average of the digit '0' in the binary numbers is: {0} \ntThe average of the digit '1' in the binary numbers is: {1}\n", averageOfZero, averageOfOne);
+            float averageOfZero = AverageOfZero(i_binaryNumber1, i_binaryNumber2, i_binaryNumber3, i_binaryNumber4);
+            float averageOfOne = AverageOfOne(i_binaryNumber1, i_binaryNumber2, i_binaryNumber3, i_binaryNumber4);
+            string printAverageOfZeroAndOne = string.Format("The average of the digit '0' in the binary numbers is: {0} \nThe average of the digit '1' in the binary numbers is: {1}\n", averageOfZero, averageOfOne);
 
-           System.Console.WriteLine(printAverageOfZeroAndOne);
+            System.Console.WriteLine(printAverageOfZeroAndOne);
         }
 
         public static void StatisticsOfDecimalNumbers(int i_decimalNumber1, int i_decimalNumber2, int i_decimalNumber3, int i_decimalNumber4)
         {
-           int howMuchPowerOfTwo = IsPowerOfTwo(i_decimalNumber1) + IsPowerOfTwo(i_decimalNumber2) + IsPowerOfTwo(i_decimalNumber3) + IsPowerOfTwo(i_decimalNumber4);
-           int averagedNumbers = (i_decimalNumber1 + i_decimalNumber2 + i_decimalNumber3 + i_decimalNumber4) / 4;
-           int howMuchAscendingSeries = IsAscendingSeries(i_decimalNumber1) + IsAscendingSeries(i_decimalNumber2) + IsAscendingSeries(i_decimalNumber3) + IsAscendingSeries(i_decimalNumber4);
-           string printStatistics = string.Format("{0} of the numbers are a power of 2.\nThere are {1} numbers which are an ascending series.\nThe average of the decimal numbers is {2}.\n", howMuchPowerOfTwo, howMuchAscendingSeries, averagedNumbers);
+            int howMuchPowerOfTwo = HowMuchPowerOfTwo(i_decimalNumber1, i_decimalNumber2, i_decimalNumber3, i_decimalNumber4);
+            float averagedNumbers = (float)(i_decimalNumber1 + i_decimalNumber2 + i_decimalNumber3 + i_decimalNumber4) / 4;
+            int howMuchAscendingSeries = IsAscendingSeries(i_decimalNumber1) + IsAscendingSeries(i_decimalNumber2) + IsAscendingSeries(i_decimalNumber3) + IsAscendingSeries(i_decimalNumber4);
+            string printStatistics = string.Format("{0} of the numbers are a power of 2.\nThere are {1} numbers which are an ascending series.\nThe average of the decimal numbers is {2}.\n", howMuchPowerOfTwo, howMuchAscendingSeries, averagedNumbers);
 
-           System.Console.WriteLine(printStatistics);
+            System.Console.WriteLine(printStatistics);
+        }
+
+        public static int HowMuchPowerOfTwo(int i_decimalNumber1, int i_decimalNumber2, int i_decimalNumber3, int i_decimalNumber4)
+        {
+            int howMuchPowerOfTwo = IsPowerOfTwo(i_decimalNumber1) + IsPowerOfTwo(i_decimalNumber2) + IsPowerOfTwo(i_decimalNumber3) + IsPowerOfTwo(i_decimalNumber4);
+
+            return howMuchPowerOfTwo;
         }
     }
 }
-
-//public static int HowMuchPowerOfTwo(int i_DecimalNumber1, int i_DecimalNumber2, int i_DecimalNumber3, int i_DecimalNumber4)
-//{
-//    int howMuchPowerOfTwo = IsPowerOfTwo(i_DecimalNumber1) + IsPowerOfTwo(i_DecimalNumber2) + IsPowerOfTwo(i_DecimalNumber3) + IsPowerOfTwo(i_DecimalNumber4);
-
-//    return howMuchPowerOfTwo;
-//}
-
-//public static float AveragedDecimalNumbers(int i_DecimalNumber1, int i_DecimalNumber2, int i_DecimalNumber3, int i_DecimalNumber4)
-//{
-//    float averagedDecimalNumbers = (i_DecimalNumber1 + i_DecimalNumber2 + i_DecimalNumber3 + i_DecimalNumber4) / 4;
-
-//    return averagedDecimalNumbers;
-//}
