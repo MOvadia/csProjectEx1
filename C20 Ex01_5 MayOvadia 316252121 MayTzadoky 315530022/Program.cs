@@ -1,136 +1,84 @@
-﻿namespace C20_Ex01_4_MayOvadia_316252121_MayTzadoky_315530022
+﻿namespace C20_Ex01_5_MayOvadia_316252121_MayTzadoky_315530022
 {
     public class Program
     {
         public static void Main()
         {
-            StringAnalyzer();
+            NumberStatistics();
         }
 
-        public static void StringAnalyzer()
+        public static void NumberStatistics()
         {
-            bool isNumber = false;
-            string stringToAnalyze = GetUserValidInputString(ref isNumber);
-            IsPalindrom(stringToAnalyze);
-            if (isNumber)
-            {
-                IsDivideByThree(stringToAnalyze);
-            }
-            else
-            {
-                LowerCaseNumberInString(stringToAnalyze);
-            }
+            System.Console.WriteLine("Please insert a number with 8 digits: ");
+            string numberFromTheUser = System.Console.ReadLine();
+            int maximumDigit = MaximumDigit(numberFromTheUser);
+            int minimumDigit = MinimumDigit(numberFromTheUser);
+            int counterDigitsAreDividedByFour = HowManyDigitsAreDividedByFour(numberFromTheUser);
+            int counterDigitsWhichLargeThanOnenessDigit = HowManyDigitsWhichLargeThanOnenessDigit(numberFromTheUser);
+
+            string printStatistics = string.Format("The maximum digit of the number is: {0}.\nThe minimum digit of the number is: {1}.\n{2} digits divided by 4.\n{3} digits large than oneness digit.\n", maximumDigit, minimumDigit, counterDigitsAreDividedByFour, counterDigitsWhichLargeThanOnenessDigit);
+            System.Console.WriteLine(printStatistics);
         }
 
-        public static string GetUserValidInputString(ref bool io_isNumber)
+        public static int MaximumDigit(string i_number)
         {
-            bool isJustNumOrJustStr;
-            bool isInDefinedLength;
-            string inputString;
-            long stringBecomeNum;
-            do
-            {
-                System.Console.WriteLine("Please enter string:");
-                inputString = System.Console.ReadLine();
-                io_isNumber = long.TryParse(inputString, out stringBecomeNum);
-                isInDefinedLength = inputString.Length == 12;
-                isJustNumOrJustStr = io_isNumber || IsOnlyLettersInString(inputString);
-            }
-            while (!isJustNumOrJustStr || !isInDefinedLength);
+            int maxDigit = i_number[0] - '0';
 
-            return inputString;
-        }
-
-        public static bool IsOnlyLettersInString(string i_inputString)
-        {
-            bool isdigit;
-            for (int i = 0; i < i_inputString.Length; ++i)
+            for (int i = 1; i < 8; i++)
             {
-                isdigit = char.IsDigit(i_inputString[i]);
-                if (isdigit)
+                if (maxDigit < (i_number[i] - '0'))
                 {
-                    return false;
+                    maxDigit = i_number[i] - '0';
                 }
             }
 
-            return true;
+            return maxDigit;
         }
 
-        public static void IsPalindrom(string i_stringToAnalyze)
+        public static int MinimumDigit(string i_number)
         {
-            bool isPalindrom = IsPalindromRec(i_stringToAnalyze, 0, i_stringToAnalyze.Length - 1);
-            string palindromResualt;
-            if (isPalindrom)
+            int minDigit = i_number[0] - '0';
+
+            for (int i = 1; i < 8; i++)
             {
-                palindromResualt = string.Format("The string: {0} is palindrom", i_stringToAnalyze);
-            }
-            else
-            {
-                palindromResualt = string.Format("The string: {0} is not palindrom", i_stringToAnalyze);
-            }
-
-            System.Console.WriteLine(palindromResualt);
-        }
-
-        public static bool IsPalindromRec(string i_stringToAnalyze, int i_startOfString, int i_endOfString)
-        {
-            bool isSingleCharOrEmpty = i_startOfString >= i_endOfString;
-
-            if (isSingleCharOrEmpty)
-            {
-                return true;
-            }
-
-            bool isFirstAndLastLetterEqual = i_stringToAnalyze[i_startOfString] == i_stringToAnalyze[i_endOfString];
-
-            if (!isFirstAndLastLetterEqual)
-            {
-                return false;
-            }
-
-            if (!isSingleCharOrEmpty)
-            {
-                return IsPalindromRec(i_stringToAnalyze, i_startOfString + 1, i_endOfString - 1);
-            }
-
-            return true;
-        }
-
-        public static void IsDivideByThree(string i_stringToAnalyze)
-        {
-            int sumOfNumberDigit = 0;
-            for (int i = 0; i < i_stringToAnalyze.Length; ++i)
-            {
-                sumOfNumberDigit += i_stringToAnalyze[i] - '0';
-            }
-
-            bool isDividByThree = sumOfNumberDigit % 3 == 0;
-
-            string divideByThreeResualt;
-            if (isDividByThree)
-            {
-                divideByThreeResualt = string.Format("The number: {0} is divide by 3", i_stringToAnalyze);
-            }
-            else
-            {
-                divideByThreeResualt = string.Format("The number: {0} is not divide by 3", i_stringToAnalyze);
-            }
-
-            System.Console.WriteLine(divideByThreeResualt);
-        }
-
-        public static void LowerCaseNumberInString(string i_stringToAnalyze)
-        {
-            int numberOfLowerCase = 0;
-            for (int i = 0; i < i_stringToAnalyze.Length; ++i)
-            {
-                if (char.IsLower(i_stringToAnalyze[i]))
+                if (minDigit > (i_number[i] - '0'))
                 {
-                    numberOfLowerCase++;
+                    minDigit = i_number[i] - '0';
                 }
             }
 
-            System.Console.WriteLine(string.Format("The number of lower letters in the string: {0} is: {1}", i_stringToAnalyze, numberOfLowerCase));
+            return minDigit;
+        }
+
+        public static int HowManyDigitsAreDividedByFour(string i_number)
+        {
+            int counterDigitsAreDividedByFour = 0;
+
+            for (int i = 0; i < 8; i++)
+            {
+                if ((i_number[i] - '0') % 4 == 0)
+                {
+                    counterDigitsAreDividedByFour++;
+                }
+            }
+
+            return counterDigitsAreDividedByFour;
+        }
+
+        public static int HowManyDigitsWhichLargeThanOnenessDigit(string i_number)
+        {
+            int onenessDigit = i_number[0];
+            int counterDigitsWhichLargeThanOnenessDigit = 0;
+
+            for (int i = 1; i < 8; i++)
+            {
+                if (i_number[i] > onenessDigit)
+                {
+                    counterDigitsWhichLargeThanOnenessDigit++;
+                }
+            }
+
+            return counterDigitsWhichLargeThanOnenessDigit;
         }
     }
 }
