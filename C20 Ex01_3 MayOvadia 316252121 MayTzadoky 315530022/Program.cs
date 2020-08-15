@@ -6,10 +6,10 @@
     {
         public static void Main()
         {
-            PrintHourGlass();
+            PrintDynamicHourGlass();
         }
 
-        public static void PrintHourGlass()
+        public static void PrintDynamicHourGlass()
         {
             int lengthOfHourGlass = GetUserInputValid();
             
@@ -18,7 +18,7 @@
                 lengthOfHourGlass += 1;
             }
 
-            C20_Ex01_2_MayOvadia_316252121_MayTzadoky_315530022.Program.PrintHourGlassRec(0, lengthOfHourGlass);
+            C20_Ex01_2_MayOvadia_316252121_MayTzadoky_315530022.Program.PrintHourGlass(0, lengthOfHourGlass);
         }
 
         public static int GetUserInputValid()
