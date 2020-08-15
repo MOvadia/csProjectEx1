@@ -42,26 +42,28 @@
         public static bool IsValidUserInput(string i_binaryNumber)
         {
             bool isBinary;
+            bool IsValidUserInput = true;
 
             if (!(i_binaryNumber.Length == 8))
             {
                 System.Console.WriteLine("Input is invalid!\n");
-
-                return false;
+                IsValidUserInput = false;
             }
-
-            for (int i = 0; i < 8; ++i)
+            else
             {
-                isBinary = i_binaryNumber[i] == '0' || i_binaryNumber[i] == '1';
-                if (!isBinary)
+                for (int i = 0; i < 8; ++i)
                 {
-                    System.Console.WriteLine("Invalid input!\n");
+                    isBinary = i_binaryNumber[i] == '0' || i_binaryNumber[i] == '1';
+                    if (!isBinary)
+                    {
+                        System.Console.WriteLine("Invalid input!\n");
 
-                    return false;
+                        IsValidUserInput = false;
+                    }
                 }
             }
 
-            return true;
+            return IsValidUserInput;
         }
 
         public static int CounterZero(string i_binaryNumber)

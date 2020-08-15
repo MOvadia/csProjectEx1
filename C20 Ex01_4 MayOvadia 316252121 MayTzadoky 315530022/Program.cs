@@ -44,16 +44,18 @@
         public static bool IsOnlyLettersInString(string i_inputString)
         {
             bool isdigit;
+            bool isOnlyLettersInString = true;
             for (int i = 0; i < i_inputString.Length; ++i)
             {
                 isdigit = char.IsDigit(i_inputString[i]);
                 if (isdigit)
                 {
-                    return false;
+                    isOnlyLettersInString = false;
+                    break;
                 }
             }
 
-            return true;
+            return isOnlyLettersInString;
         }
 
         public static void IsPalindrom(string i_stringToAnalyze)
