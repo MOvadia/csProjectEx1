@@ -4,27 +4,27 @@
     {
         public static void Main()
         {
-            PrintHourglassRec(0);
+            PrintHourGlassRec(0, 5);
         }
 
-        public static void PrintHourglassRec(int i_numOfSpaces)
+        public static void PrintHourGlassRec(int i_numOfSpaces, int i_lengthOfHourGlass)
         {
-            bool isSingleStar = i_numOfSpaces >= 2;
+            bool isSingleStar = i_lengthOfHourGlass == 1;
 
             if (isSingleStar)
             {
-                PrintStarsLine(i_numOfSpaces);
+                PrintStarsLine(i_numOfSpaces, i_lengthOfHourGlass);
                 return;
             }
 
-            PrintStarsLine(i_numOfSpaces);
-            PrintHourglassRec(i_numOfSpaces + 1);
-            PrintStarsLine(i_numOfSpaces);
+            PrintStarsLine(i_numOfSpaces, i_lengthOfHourGlass);
+            PrintHourGlassRec(i_numOfSpaces + 1, i_lengthOfHourGlass - 2);
+            PrintStarsLine(i_numOfSpaces, i_lengthOfHourGlass);
         }
 
-        public static void PrintStarsLine(int i_numOfSpaces)
+        public static void PrintStarsLine(int i_numOfSpaces, int i_lengthOfHourGlass)
         {
-            int numOfStars = 5 - (i_numOfSpaces * 2);
+            int numOfStars = i_lengthOfHourGlass;
 
             PrintSpaces(i_numOfSpaces);
 
@@ -33,7 +33,6 @@
                 System.Console.Write("*");
             }
 
-            PrintSpaces(i_numOfSpaces);
             System.Console.Write("\n");
         }
 

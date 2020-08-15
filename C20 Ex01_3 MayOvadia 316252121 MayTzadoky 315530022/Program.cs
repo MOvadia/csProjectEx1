@@ -18,7 +18,7 @@
                 lengthOfHourGlass += 1;
             }
 
-            PrintHourGlassRec(0, lengthOfHourGlass);
+            C20_Ex01_2_MayOvadia_316252121_MayTzadoky_315530022.Program.PrintHourGlassRec(0, lengthOfHourGlass);
         }
 
         public static int GetUserInputValid()
@@ -40,35 +40,6 @@
             while (!isInt || !isPositiveNum);
 
             return lengthOfHourGlassInt;
-        }
-
-        public static void PrintHourGlassRec(int i_numOfSpaces, int i_lengthOfHourGlass)
-        {
-            bool isSingleStar = i_lengthOfHourGlass == 1;
-
-            if (isSingleStar)
-            {
-                PrintStarsLine(i_numOfSpaces, i_lengthOfHourGlass);
-                return;
-            }
-
-            PrintStarsLine(i_numOfSpaces, i_lengthOfHourGlass);
-            PrintHourGlassRec(i_numOfSpaces + 1, i_lengthOfHourGlass - 2);
-            PrintStarsLine(i_numOfSpaces, i_lengthOfHourGlass);
-        }
-
-        public static void PrintStarsLine(int i_numOfSpaces, int i_lengthOfHourGlass)
-        {
-            int numOfStars = i_lengthOfHourGlass;
-
-            C20_Ex01_2_MayOvadia_316252121_MayTzadoky_315530022.Program.PrintSpaces(i_numOfSpaces);
-
-            for (int i = 0; i < numOfStars; ++i)
-            {
-                System.Console.Write("*");
-            }
-
-            System.Console.Write("\n");
         }
     }
 }
