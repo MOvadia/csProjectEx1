@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C20 Ex01_1 MayOvadia 316252121 MayTzadoky 315530022_", "C20 Ex01 May 316252121 May 315530022\C20 Ex01_1 MayOvadia 316252121 MayTzadoky 315530022_.csproj", "{A9B1B59F-A6E5-4913-AAE1-D271AB4C19B0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C20 Ex01_2 MayOvadia 316252121 MayTzadoky 315530022", "C20 Ex01_2 MayOvadia 316252121 MayTzadoky 315530022\C20 Ex01_2 MayOvadia 316252121 MayTzadoky 315530022.csproj", "{17E263AA-F0B9-406B-A3F5-4261A7CF1E6F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C20 Ex01_3 MayOvadia 316252121 MayTzadoky 315530022", "C20 Ex01_3 MayOvadia 316252121 MayTzadoky 315530022\C20 Ex01_3 MayOvadia 316252121 MayTzadoky 315530022.csproj", "{EEBA7DE0-8613-4058-9351-9C65F917FB8A}"
@@ -21,10 +19,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A9B1B59F-A6E5-4913-AAE1-D271AB4C19B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9B1B59F-A6E5-4913-AAE1-D271AB4C19B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9B1B59F-A6E5-4913-AAE1-D271AB4C19B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9B1B59F-A6E5-4913-AAE1-D271AB4C19B0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{17E263AA-F0B9-406B-A3F5-4261A7CF1E6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{17E263AA-F0B9-406B-A3F5-4261A7CF1E6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17E263AA-F0B9-406B-A3F5-4261A7CF1E6F}.Release|Any CPU.ActiveCfg = Release|Any CPU

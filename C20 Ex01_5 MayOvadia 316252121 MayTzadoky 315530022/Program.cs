@@ -9,8 +9,7 @@
 
         public static void NumberStatistics()
         {
-            System.Console.WriteLine("Please insert a number with 8 digits: ");
-            string numberFromTheUser = System.Console.ReadLine();
+            string numberFromTheUser = GetUserInputValid();
             int maximumDigit = MaximumDigit(numberFromTheUser);
             int minimumDigit = MinimumDigit(numberFromTheUser);
             int counterDigitsAreDividedByFour = HowManyDigitsAreDividedByFour(numberFromTheUser);
@@ -18,6 +17,30 @@
 
             string printStatistics = string.Format("The maximum digit of the number is: {0}.\nThe minimum digit of the number is: {1}.\n{2} digits divided by 4.\n{3} digits large than oneness digit.\n", maximumDigit, minimumDigit, counterDigitsAreDividedByFour, counterDigitsWhichLargeThanOnenessDigit);
             System.Console.WriteLine(printStatistics);
+        }
+
+        public static string GetUserInputValid()
+        {
+            bool isInt = false;
+            bool isPositiveNum = false;
+            int howManyDigits;
+            int numberFromTheUserInt;
+            string numberFromTheUserStr;
+
+            do
+            {
+                System.Console.WriteLine("Please insert a number with 8 digits: ");
+                numberFromTheUserStr = System.Console.ReadLine();
+                howManyDigits = numberFromTheUserStr.Length;
+                isInt = int.TryParse(numberFromTheUserStr, out numberFromTheUserInt);
+                if (isInt)
+                {
+                    isPositiveNum = numberFromTheUserInt > 0;
+                }
+            }
+            while (!isInt || !isPositiveNum || howManyDigits != 8);
+
+            return numberFromTheUserStr;
         }
 
         public static int MaximumDigit(string i_number)

@@ -4,3 +4,9 @@ C:\Users\movadia\cs\csProjectEx1\csProjectEx1\C20 Ex01_5 MayOvadia 316252121 May
 C:\Users\movadia\cs\csProjectEx1\csProjectEx1\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022\obj\Debug\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022.csproj.CoreCompileInputs.cache
 C:\Users\movadia\cs\csProjectEx1\csProjectEx1\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022\obj\Debug\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022.exe
 C:\Users\movadia\cs\csProjectEx1\csProjectEx1\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022\obj\Debug\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022.pdb
+C:\Users\ONE1\Desktop\new\csProjectEx1\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022\bin\Debug\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022.exe
+C:\Users\ONE1\Desktop\new\csProjectEx1\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022\bin\Debug\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022.pdb
+C:\Users\ONE1\Desktop\new\csProjectEx1\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022\obj\Debug\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022.csprojAssemblyReference.cache
+C:\Users\ONE1\Desktop\new\csProjectEx1\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022\obj\Debug\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022.csproj.CoreCompileInputs.cache
+C:\Users\ONE1\Desktop\new\csProjectEx1\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022\obj\Debug\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022.exe
+C:\Users\ONE1\Desktop\new\csProjectEx1\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022\obj\Debug\C20 Ex01_5 MayOvadia 316252121 MayTzadoky 315530022.pdb
