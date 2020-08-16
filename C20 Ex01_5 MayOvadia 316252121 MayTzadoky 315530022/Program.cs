@@ -15,8 +15,12 @@
             int counterDigitsAreDividedByFour = HowManyDigitsAreDividedByFour(numberFromTheUser);
             int counterDigitsWhichLargeThanOnenessDigit = HowManyDigitsWhichLargeThanOnenessDigit(numberFromTheUser);
 
-            string printStatistics = string.Format("The maximum digit of the number is: {0}.\nThe minimum digit of the number is: {1}.\n{2} digits divided by 4.\n{3} digits large than oneness digit.\n", maximumDigit, minimumDigit, counterDigitsAreDividedByFour, counterDigitsWhichLargeThanOnenessDigit);
-            System.Console.WriteLine(printStatistics);
+            System.Text.StringBuilder StatisticsOutput = new System.Text.StringBuilder();
+            StatisticsOutput.AppendLine("The maximum digit of the number is: " + maximumDigit);
+            StatisticsOutput.AppendLine("The minimum digit of the number is: " + minimumDigit);
+            StatisticsOutput.AppendLine(counterDigitsAreDividedByFour + " digits divided by 4.");
+            StatisticsOutput.AppendLine(counterDigitsWhichLargeThanOnenessDigit + " digits large than oneness digit.");
+            System.Console.WriteLine(StatisticsOutput.ToString());
         }
 
         public static string GetUserInputValid()

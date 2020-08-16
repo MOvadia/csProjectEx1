@@ -19,7 +19,7 @@
             int decimalNumber3 = BinaryToDecimal(binaryNumber3);
             int decimalNumber4 = BinaryToDecimal(binaryNumber4);
 
-            string printDecimalNumber = string.Format("The decimal numbers are: {0}, {1}, {2}, {3}\n", decimalNumber1, decimalNumber2, decimalNumber3, decimalNumber4);
+            string printDecimalNumber = string.Format("The decimal numbers are: {0}, {1}, {2}, {3}", decimalNumber1, decimalNumber2, decimalNumber3, decimalNumber4);
 
             System.Console.WriteLine(printDecimalNumber);
             StatisticsOfBinaryNumbers(binaryNumber1, binaryNumber2, binaryNumber3, binaryNumber4);
@@ -46,7 +46,7 @@
 
             if (!(i_binaryNumber.Length == 8))
             {
-                System.Console.WriteLine("Input is invalid!\n");
+                System.Console.WriteLine("Input is invalid!");
                 IsValidUserInput = false;
             }
             else
@@ -56,7 +56,7 @@
                     isBinary = i_binaryNumber[i] == '0' || i_binaryNumber[i] == '1';
                     if (!isBinary)
                     {
-                        System.Console.WriteLine("Invalid input!\n");
+                        System.Console.WriteLine("Invalid input!");
 
                         IsValidUserInput = false;
                     }
@@ -168,9 +168,12 @@
         {
             float averageOfZero = AverageOfZero(i_binaryNumber1, i_binaryNumber2, i_binaryNumber3, i_binaryNumber4);
             float averageOfOne = AverageOfOne(i_binaryNumber1, i_binaryNumber2, i_binaryNumber3, i_binaryNumber4);
-            string printAverageOfZeroAndOne = string.Format("The average of the digit '0' in the binary numbers is: {0} \nThe average of the digit '1' in the binary numbers is: {1}\n", averageOfZero, averageOfOne);
+            System.Text.StringBuilder AverageOfZeroAndOneOutput = new System.Text.StringBuilder();
 
-            System.Console.WriteLine(printAverageOfZeroAndOne);
+            AverageOfZeroAndOneOutput.AppendLine("The average of the digit '0' in the binary numbers is: " + averageOfZero);
+            AverageOfZeroAndOneOutput.AppendLine("The average of the digit '1' in the binary numbers is: " + averageOfOne);
+           
+            System.Console.WriteLine(AverageOfZeroAndOneOutput.ToString());
         }
 
         public static void StatisticsOfDecimalNumbers(int i_decimalNumber1, int i_decimalNumber2, int i_decimalNumber3, int i_decimalNumber4)
@@ -178,9 +181,8 @@
             int howMuchPowerOfTwo = HowMuchPowerOfTwo(i_decimalNumber1, i_decimalNumber2, i_decimalNumber3, i_decimalNumber4);
             float averagedNumbers = (float)(i_decimalNumber1 + i_decimalNumber2 + i_decimalNumber3 + i_decimalNumber4) / 4;
             int howMuchAscendingSeries = IsAscendingSeries(i_decimalNumber1) + IsAscendingSeries(i_decimalNumber2) + IsAscendingSeries(i_decimalNumber3) + IsAscendingSeries(i_decimalNumber4);
-            string printStatistics = string.Format("{0} of the numbers are a power of 2.\nThere are {1} numbers which are an ascending series.\nThe average of the decimal numbers is {2}.\n", howMuchPowerOfTwo, howMuchAscendingSeries, averagedNumbers);
 
-            System.Console.WriteLine(printStatistics);
+            PrintStatistics(howMuchPowerOfTwo, howMuchAscendingSeries, averagedNumbers);
         }
 
         public static int HowMuchPowerOfTwo(int i_decimalNumber1, int i_decimalNumber2, int i_decimalNumber3, int i_decimalNumber4)
@@ -188,6 +190,15 @@
             int howMuchPowerOfTwo = IsPowerOfTwo(i_decimalNumber1) + IsPowerOfTwo(i_decimalNumber2) + IsPowerOfTwo(i_decimalNumber3) + IsPowerOfTwo(i_decimalNumber4);
 
             return howMuchPowerOfTwo;
+        }
+
+        public static void PrintStatistics(int i_howMuchPowerOfTwo, int i_howMuchAscendingSeries, float i_averagedNumbers)
+        {
+            System.Text.StringBuilder StatisticsOutput = new System.Text.StringBuilder();
+            StatisticsOutput.AppendLine(i_howMuchPowerOfTwo + " of the numbers are a power of 2.");
+            StatisticsOutput.AppendLine("There are " + i_howMuchAscendingSeries + " numbers which are an ascending series.");
+            StatisticsOutput.AppendLine("The average of the decimal numbers is " + i_averagedNumbers);
+            System.Console.WriteLine(StatisticsOutput.ToString());
         }
     }
 }
