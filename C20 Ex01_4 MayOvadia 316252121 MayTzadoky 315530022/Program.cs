@@ -60,7 +60,8 @@
 
         public static void IsPalindrom(string i_stringToAnalyze)
         {
-            bool isPalindrom = IsPalindromRec(i_stringToAnalyze, 0, i_stringToAnalyze.Length - 1);
+            bool isPalindrom = true;
+            IsPalindromRec(i_stringToAnalyze, 0, i_stringToAnalyze.Length - 1, ref isPalindrom);
             string palindromResualt;
             if (isPalindrom)
             {
@@ -74,28 +75,25 @@
             System.Console.WriteLine(palindromResualt);
         }
 
-        public static bool IsPalindromRec(string i_stringToAnalyze, int i_startOfString, int i_endOfString)
+        public static void IsPalindromRec(string i_stringToAnalyze, int i_startOfString, int i_endOfString, ref bool io_isValidPalindrom)
         {
             bool isSingleCharOrEmpty = i_startOfString >= i_endOfString;
 
-            if (isSingleCharOrEmpty)
+            if(isSingleCharOrEmpty || !io_isValidPalindrom)
             {
-                return true;
+                return;
             }
 
             bool isFirstAndLastLetterEqual = i_stringToAnalyze[i_startOfString] == i_stringToAnalyze[i_endOfString];
-
             if (!isFirstAndLastLetterEqual)
             {
-                return false;
+                io_isValidPalindrom = false;
             }
 
             if (!isSingleCharOrEmpty)
             {
-                return IsPalindromRec(i_stringToAnalyze, i_startOfString + 1, i_endOfString - 1);
+                IsPalindromRec(i_stringToAnalyze, i_startOfString + 1, i_endOfString - 1, ref io_isValidPalindrom);
             }
-
-            return true;
         }
 
         public static void IsDivideByThree(string i_stringToAnalyze)
