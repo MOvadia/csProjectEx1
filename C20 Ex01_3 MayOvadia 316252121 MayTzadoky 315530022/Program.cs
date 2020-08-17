@@ -27,6 +27,7 @@
             bool isPositiveNum = false;
             string lengthOfHourGlassStr;
             int lengthOfHourGlassInt;
+
             do
             {
                 System.Console.WriteLine("Please enter the number of lines for the Hour glass: ");

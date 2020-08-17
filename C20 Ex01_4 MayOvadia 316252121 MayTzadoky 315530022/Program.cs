@@ -11,7 +11,8 @@
         {
             bool isNumber = false;
             string stringToAnalyze = GetUserValidInputString(ref isNumber);
-            IsPalindrom(stringToAnalyze);
+
+            IsPalindrome(stringToAnalyze);
             if (isNumber)
             {
                 IsDivideByThree(stringToAnalyze);
@@ -28,6 +29,7 @@
             bool isInDefinedLength;
             string inputString;
             long stringBecomeNum;
+
             do
             {
                 System.Console.WriteLine("Please enter string 12 chars long:");
@@ -43,12 +45,12 @@
 
         public static bool IsOnlyLettersInString(string i_inputString)
         {
-            bool isdigit;
             bool isOnlyLettersInString = true;
+
             for (int i = 0; i < i_inputString.Length; ++i)
             {
-                isdigit = char.IsDigit(i_inputString[i]);
-                if (isdigit)
+                bool isDigit = char.IsDigit(i_inputString[i]);
+                if (isDigit)
                 {
                     isOnlyLettersInString = false;
                     break;
@@ -58,69 +60,66 @@
             return isOnlyLettersInString;
         }
 
-        public static void IsPalindrom(string i_stringToAnalyze)
+        public static void IsPalindrome(string i_stringToAnalyze)
         {
-            bool isPalindrom = true;
-            IsPalindromRec(i_stringToAnalyze, 0, i_stringToAnalyze.Length - 1, ref isPalindrom);
-            string palindromResualt;
-            if (isPalindrom)
+            bool isPalindrome = true;
+            string palindromeResult;
+
+            IsPalindromeRec(i_stringToAnalyze, 0, i_stringToAnalyze.Length - 1, ref isPalindrome);
+            if (isPalindrome)
             {
-                palindromResualt = string.Format("The string: {0} is palindrom", i_stringToAnalyze);
+                palindromeResult = string.Format("The string: {0} is palindrome", i_stringToAnalyze);
             }
             else
             {
-                palindromResualt = string.Format("The string: {0} is not palindrom", i_stringToAnalyze);
+                palindromeResult = string.Format("The string: {0} is not palindrome", i_stringToAnalyze);
             }
 
-            System.Console.WriteLine(palindromResualt);
+            System.Console.WriteLine(palindromeResult);
         }
 
-        public static void IsPalindromRec(string i_stringToAnalyze, int i_startOfString, int i_endOfString, ref bool io_isValidPalindrom)
+        public static void IsPalindromeRec(string i_stringToAnalyze, int i_startOfString, int i_endOfString, ref bool io_isValidPalindrome)
         {
             bool isSingleCharOrEmpty = i_startOfString >= i_endOfString;
 
-            if (!isSingleCharOrEmpty && io_isValidPalindrom)
+            if (!isSingleCharOrEmpty && io_isValidPalindrome)
             {
-                bool isFirstAndLastLetterEqual = i_stringToAnalyze[i_startOfString] == i_stringToAnalyze[i_endOfString];
-                if (!isFirstAndLastLetterEqual)
-                {
-                    io_isValidPalindrom = false;
-                }
-
+                io_isValidPalindrome = i_stringToAnalyze[i_startOfString] == i_stringToAnalyze[i_endOfString];
                 if (!isSingleCharOrEmpty)
                 {
-                    IsPalindromRec(i_stringToAnalyze, i_startOfString + 1, i_endOfString - 1, ref io_isValidPalindrom);
+                    IsPalindromeRec(i_stringToAnalyze, i_startOfString + 1, i_endOfString - 1, ref io_isValidPalindrome);
                 }
             }
-
         }
 
         public static void IsDivideByThree(string i_stringToAnalyze)
         {
             int sumOfNumberDigit = 0;
+
             for (int i = 0; i < i_stringToAnalyze.Length; ++i)
             {
                 sumOfNumberDigit += i_stringToAnalyze[i] - '0';
             }
 
-            bool isDividByThree = sumOfNumberDigit % 3 == 0;
+            bool isDivideByThree = sumOfNumberDigit % 3 == 0;
+            string divideByThreeResult;
 
-            string divideByThreeResualt;
-            if (isDividByThree)
+            if(isDivideByThree)
             {
-                divideByThreeResualt = string.Format("The number: {0} is divide by 3", i_stringToAnalyze);
+                divideByThreeResult = string.Format("The number: {0} is divide by 3", i_stringToAnalyze);
             }
             else
             {
-                divideByThreeResualt = string.Format("The number: {0} is not divide by 3", i_stringToAnalyze);
+                divideByThreeResult = string.Format("The number: {0} is not divide by 3", i_stringToAnalyze);
             }
 
-            System.Console.WriteLine(divideByThreeResualt);
+            System.Console.WriteLine(divideByThreeResult);
         }
 
         public static void LowerCaseNumberInString(string i_stringToAnalyze)
         {
             int numberOfLowerCase = 0;
+
             for (int i = 0; i < i_stringToAnalyze.Length; ++i)
             {
                 if (char.IsLower(i_stringToAnalyze[i]))

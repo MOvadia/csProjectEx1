@@ -28,13 +28,11 @@
                 AppendToStringHourGlassRec(i_numOfSpaces + 1, i_lengthOfHourGlass - 2, ref io_hourGlassBuild);
                 AppendStarsLine(i_numOfSpaces, i_lengthOfHourGlass, ref io_hourGlassBuild);
             }
-
         }
 
         public static void AppendStarsLine(int i_numOfSpaces, int i_lengthOfHourGlass, ref System.Text.StringBuilder io_hourGlassBuild)
         {
             AppendSpaces(i_numOfSpaces, ref io_hourGlassBuild);
-
             for (int i = 0; i < i_lengthOfHourGlass; ++i)
             {
                 io_hourGlassBuild.Append("*");
