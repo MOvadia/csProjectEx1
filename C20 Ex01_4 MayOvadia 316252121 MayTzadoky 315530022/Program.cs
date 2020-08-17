@@ -79,21 +79,20 @@
         {
             bool isSingleCharOrEmpty = i_startOfString >= i_endOfString;
 
-            if(isSingleCharOrEmpty || !io_isValidPalindrom)
+            if (!isSingleCharOrEmpty && io_isValidPalindrom)
             {
-                return;
+                bool isFirstAndLastLetterEqual = i_stringToAnalyze[i_startOfString] == i_stringToAnalyze[i_endOfString];
+                if (!isFirstAndLastLetterEqual)
+                {
+                    io_isValidPalindrom = false;
+                }
+
+                if (!isSingleCharOrEmpty)
+                {
+                    IsPalindromRec(i_stringToAnalyze, i_startOfString + 1, i_endOfString - 1, ref io_isValidPalindrom);
+                }
             }
 
-            bool isFirstAndLastLetterEqual = i_stringToAnalyze[i_startOfString] == i_stringToAnalyze[i_endOfString];
-            if (!isFirstAndLastLetterEqual)
-            {
-                io_isValidPalindrom = false;
-            }
-
-            if (!isSingleCharOrEmpty)
-            {
-                IsPalindromRec(i_stringToAnalyze, i_startOfString + 1, i_endOfString - 1, ref io_isValidPalindrom);
-            }
         }
 
         public static void IsDivideByThree(string i_stringToAnalyze)

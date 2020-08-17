@@ -21,12 +21,14 @@
             if (isSingleStar)
             {
                 AppendStarsLine(i_numOfSpaces, i_lengthOfHourGlass, ref io_hourGlassBuild);
-                return;
+            }
+            else
+            {
+                AppendStarsLine(i_numOfSpaces, i_lengthOfHourGlass, ref io_hourGlassBuild);
+                AppendToStringHourGlassRec(i_numOfSpaces + 1, i_lengthOfHourGlass - 2, ref io_hourGlassBuild);
+                AppendStarsLine(i_numOfSpaces, i_lengthOfHourGlass, ref io_hourGlassBuild);
             }
 
-            AppendStarsLine(i_numOfSpaces, i_lengthOfHourGlass, ref io_hourGlassBuild);
-            AppendToStringHourGlassRec(i_numOfSpaces + 1, i_lengthOfHourGlass - 2, ref io_hourGlassBuild);
-            AppendStarsLine(i_numOfSpaces, i_lengthOfHourGlass, ref io_hourGlassBuild);
         }
 
         public static void AppendStarsLine(int i_numOfSpaces, int i_lengthOfHourGlass, ref System.Text.StringBuilder io_hourGlassBuild)
